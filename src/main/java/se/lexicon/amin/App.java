@@ -6,6 +6,7 @@ public class App {
 
     public static void main(String[] args) {
 
+
         Scanner scanner = new Scanner(System.in);
 
         int calculationType;
@@ -29,50 +30,27 @@ public class App {
 
             switch (calculationType) {
                 case 1:
-                    resultOfCalculation = calculateAddition(firstValue, secondValue);
+                    resultOfCalculation = Calculation.addition(firstValue, secondValue);
                     break;
                 case 2:
-                    resultOfCalculation = calculateSubstraction(firstValue, secondValue);
+                    resultOfCalculation = Calculation.substraction(firstValue, secondValue);
                     break;
                 case 3:
-                    resultOfCalculation = calculateDivision(firstValue, secondValue);
+                    resultOfCalculation = Calculation.division(firstValue, secondValue);
                     break;
                 case 4:
-                    resultOfCalculation = calculateMultiplication(firstValue, secondValue);
+                    resultOfCalculation = Calculation.multiplication(firstValue, secondValue);
                     break;
                 default:
                     break;
             }
 
             System.out.println("Result: " + resultOfCalculation + "\n");
+
             System.out.print("Select calculation type (1-4): ");
             calculationType = scanner.nextInt();
         }
 
     }
 
-    public static double calculateAddition(double value1, double value2) {
-
-        double result = value1 + value2;
-        return result;
-
-    }
-
-    public static double calculateSubstraction(double value1, double value2) {
-
-        double result = value1 - value2;
-        return result;
-    }
-
-    public static double calculateDivision(double value1, double value2) {
-
-        double result = value1 / value2;
-        return result;
-    }
-
-    public static double calculateMultiplication(double value1, double value2) {
-
-        double result = value1 * value2;
-        return result;
-    }
 }
